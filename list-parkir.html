@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kendaraan Parkir</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #008cffe7;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #000000;
+            font-size: 22px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .list-parkir {
+            text-align: left;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e9ecef;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-group {
+    margin-bottom: 15px;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background-color: #00450d;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: #218838;
+}
+.tolli {
+    width: 88%;           /* Lebar div */
+    height: 400px;          /* Tinggi div */
+    overflow: auto;         /* Menambahkan scroll jika konten lebih besar dari div */
+    padding: 20px;          /* Padding di dalam div */
+    border: solid 3px rgb(255, 255, 255);
+}
+.pemberi{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Kendaraan yang Sedang Parkir</h1>
+        <button onclick="window.location.href='index.html'">Kembali ke Halaman Utama</button>
+        <button id="btnDeleteAll">Hapus Semua</button>
+        <div class="pemberi">
+            <div class="tolli">
+                <div class="list-parkir">
+                    <ul id="parkirList"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="parkingCode">Kode Parkir:</label>
+            <input type="text" id="parkingCode" placeholder="Masukkan Kode Parkir">
+        </div>
+        <button id="btnExit">Catat Keluar</button>
+    </div>
+    
+    <script src="semua.js"></script>
+</body>
+</html>
